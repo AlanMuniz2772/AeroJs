@@ -1,21 +1,14 @@
-let watchID;
+import { saveTask } from "./firebase.js";
 
-document.getElementById("startTracking").addEventListener("click", function () {
-  if ("geolocation" in navigator) {
-    watchID = navigator.geolocation.watchPosition(function (position) {
-      document.getElementById("latitude").textContent =
-        position.coords.latitude;
-      document.getElementById("longitude").textContent =
-        position.coords.longitude;
-    });
-  } else {
-    alert("La geolocalización no está disponible en este navegador.");
-  }
-});
+window.addEventListener("DOMContentLoaded", () => {});
 
-document.getElementById("stopTracking").addEventListener("click", function () {
-  if (watchID) {
-    navigator.geolocation.clearWatch(watchID);
-    watchID = undefined;
-  }
+const taskForm = document.getElementById("task-form");
+
+taskForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const title = taskForm["task-title"];
+  const description = taskForm["task-description"];
+
+  saveTask(title.value, description.value);
 });
