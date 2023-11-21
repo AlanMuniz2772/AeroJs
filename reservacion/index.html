@@ -1,4 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <h1>reservaion</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tecport Airlines</title>
+    </head>
+    <body>
+        <div class="mother">
+            <div class="topNavBar">
+                <div class="topMenu">
+                    <ul>
+                        <li><a href="#buscar-vuelos">Buscar Vuelos</a></li>
+                        <li><a href="#hacer-reserva">Hacer Reserva</a></li>
+                        <!-- Agrega más elementos de menú según las necesidades de tu sitio -->
+                    </ul>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <form>
+                    <div class="form-group">
+                        <label for="origen">Origen:</label>
+                        <select class="form-control" id="origen" name="origen" required>
+                            <!-- Options will be dynamically populated from the database -->
+                        </select>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="destino">Destino:</label>
+                        <select class="form-control" id="destino" name="destino" required>
+                            <!-- Options will be dynamically populated from the database -->
+                        </select>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="fecha">Fecha de Viaje:</label>
+                        <input type="date" class="form-control" id="fecha" name="fecha" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="pasajeros">Pasajeros:</label>
+                        <input type="number" class="form-control" id="pasajeros" name="pasajeros" required>
+                    </div>
+            
+                    <button type="submit" class="btn btn-primary">Buscar Vuelos</button>
+                </form>
+            </div>
+        </div>
+    </body>
 </html>
