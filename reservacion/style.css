@@ -1,0 +1,57 @@
+.container {
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.header {
+    background: rgb(16, 16, 16);
+    color: white;
+    padding: 2rem 0;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+    .header a {
+        color: white;
+        text-decoration: none;
+    }
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    letter-spacing: 4px;
+    font-size: 33px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .navigation ul li {
+        display: inline-block;
+    }
+
+        .navigation ul li a {
+            display: block;
+            padding: 0.5rem 1rem;
+            transition: all 0.4s linear;
+        }
+
+            .navigation ul li a:hover {
+                background: gray;
+            }
