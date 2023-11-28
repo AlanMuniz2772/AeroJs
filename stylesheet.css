@@ -1,9 +1,4 @@
-body {
-    background-image: url('/img/fondosss.jpeg'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta de tu imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-}
+
 
 .custom-container {
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente blanco para mejorar la legibilidad del contenido */
@@ -20,4 +15,7 @@ footer {
     background-color: #333; /* Cambia el color de fondo si es necesario */
     text-align: center; /* Centra el texto horizontalmente */
     padding: 10px; /* Añade espacio interno alrededor del texto para mejorar la apariencia */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
