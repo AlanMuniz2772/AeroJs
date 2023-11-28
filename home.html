@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecport Airlines</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        /* Define una clase personalizada para la fuente cursiva */
+        .font-cursiva {
+            font-style: italic;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +27,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="/home.html ">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/vuelos/index.html">Vuelos</a>
@@ -56,23 +62,23 @@
             </div>
 
             <div class=" bg-light p-4 rounded border col-sm flex-column d-flex">
-                <h2 class="display-8  align-self-center text-primary text-star">Buscar vuelo</h2>
+                <h2 class="display-8  align-self-center text-primary text-star font-cursiva">Buscar vuelo</h2>
                 <form>        
                     <div class="form-row">
                         <div class="form-group col-md-6 mb-3">
-                            <label for="origen">Origen</label>
+                            <label for="origen" class="font-cursiva">Origen</label>
                             <input type="text" class="form-control" id="origen" placeholder="Aeropuerto de origen">
                         </div>
                         <div class="form-group col-md-6 mb-3">
-                            <label for="destino">Destino</label>
+                            <label for="destino" class="font-cursiva">Destino</label>
                             <input type="text" class="form-control" id="destino" placeholder="Aeropuerto de destino">
                         </div>
                         <div class="form-group col-md-6 mb-3">
-                            <label for="fecha">Fecha de Viaje</label>
+                            <label for="fecha" class="font-cursiva">Fecha de Viaje</label>
                             <input type="date" class="form-control" id="fecha">
                         </div>
                         <div class="form-group col-md-6 mb-3">
-                            <label for="pasajeros">Pasajeros</label>
+                            <label for="pasajeros" class="font-cursiva">Pasajeros</label>
                             <input type="number" class="form-control" id="pasajeros" placeholder="Numero pasajeros">
                         </div>
                     </div>
