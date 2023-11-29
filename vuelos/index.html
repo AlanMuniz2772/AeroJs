@@ -8,21 +8,30 @@
       <title>Tecport Airlines</title>
       <link rel="stylesheet" href="styles.css">
       <title>Vuelos</title>
+      
       <style>
           /* Define una clase personalizada para la fuente cursiva */
-          .font-cursiva {
+          .font-cursiva 
+          {
               font-style: italic;
           }
       </style>
       <style>
-        h2.font-cursiva {
-            color: lightgreen; /* Cambia lightgreen al color que desees */
-        }
-    </style>
+            h2.font-cursiva 
+            {
+              color: lightgreen; /* Cambia lightgreen al color que desees */
+            }
+      </style>
+      <style>
+          h1.font-cursiva 
+          {
+            color:darkcyan /* Cambia lightgreen al color que desees */
+          }
+       </style>
   </head>
 
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark border" style="background-color: #808080;">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="/img/Airplane_PNG_Clipart-421.png" alt="logo" width="80px">
@@ -33,10 +42,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
+                  <a class="nav-link active" aria-current="page" href="/home.html" style="color: white;">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/vuelos/index.html">Vuelos</a>
+                  <a class="nav-link" href="/vuelos/index.html" style="color: white;">Vuelos</a>
                 </li>
                 
               </ul>
@@ -48,7 +57,7 @@
         <div class="container"> <!--Contenedor de todo abajo del navbar-->
           <div class="row"> <!--Contendra el titulo de la pagina y cuadrod e busqueda-->
             <h1 class="col-sm font-cursiva">Vuelos</h1>
-            <form class="col-sm">
+            <form class="col-sm d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
@@ -57,43 +66,52 @@
         <div class="container row"> 
           <!--Contendra los vuelos-->
           <div class="col-sm border"> 
-            <div class="border col-sm"> <!--Ejemplo de contenedor de vuelo-->
+            <div class="border col-sm "> <!--Ejemplo de contenedor de vuelo-->
               <!--Los <p> que no tienen texto es donde ira la informacion desde base de datos-->
-              <p class="font-cursiva">Id:</p>
+              <p class="font-cursiva fw-bold text-success">Id:</p>
                 <p id="textId"></p>
               
-              <p class="font-cursiva">Salida:</p>
+              <p class="font-cursiva fw-bold text-success">Salida:</p>
                 <p id="salidaId"></p>
 
               <p id="AeropuertoS"></p>
 
-              <p class="font-cursiva">Llegada:</p>
+              <p class="font-cursiva fw-bold text-success">Llegada:</p>
 
                 <p id="llegadaId"></p>
               <p id="AeropuertoL"></p>
 
-              <p class="font-cursiva">Duracion vuelo:</p>
+              <p class="font-cursiva fw-bold text-success">Duracion vuelo:</p>
                 <p id="duracionId"></p>
+
+                <form class="col-sm d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Buscar Vuelo" aria-label="Search" style="border-width: 1px;">
+                  <button class="btn btn-outline-success" type="submit" style="border-width: 1px;">Buscar Vuelo</button>
+              </form>
 
             </div>
             <div class="border col-sm"> <!--Ejemplo de contenedor de vuelo-->
               <!--Los <p> que no tienen texto es donde ira la informacion desde base de datos-->
-              <p class="font-cursiva">Id:</p>
+              <p class="font-cursiva fw-bold text-primary">Id:</p>
                 <p id="textId"></p>
               
-              <p class="font-cursiva">Salida:</p>
+              <p class="font-cursiva fw-bold text-primary">Salida:</p>
                 <p id="salidaId"></p>
 
               <p id="AeropuertoS"></p>
 
-              <p class="font-cursiva">Llegada:</p>
+              <p class="font-cursiva fw-bold text-primary">Llegada:</p>
 
                 <p id="llegadaId"></p>
               <p id="AeropuertoL"></p>
 
-              <p class="font-cursiva">Duracion vuelo:</p>
+              <p class="font-cursiva fw-bold text-primary">Duracion vuelo:</p>
                 <p id="duracionId"></p>
-
+                
+                <form class="col-sm d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Buscar vuelo" aria-label="Search" style="border-width: 0.5px;">
+                  <button class="btn btn-outline-success" type="submit" style="border-width: 0.5px;">Buscar Vuelo</button>
+              </form>
             </div>
           </div>
         
@@ -110,15 +128,6 @@
         
             <!-- Nueva fila para la carta -->
             <div class="row col-sm">
-              <div class="card" style="width: 18rem;">
-                  <img src="/img/chihuahua.jpeg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <h5 class="card-title font-cursiva">Chihuahua, Chihuahua</h5>
-                      <p class="card-text font-cursiva">La ciudad de Chihuahua, en México, ofrece modernidad e historia en una combinación que logra cautivar al visitante que arriba por motivo de negocios o placer.</p>
-                      <a href="#" class="btn btn-primary">Reserva aquí</a>
-                  </div>
-              </div>
-                <!-- Nueva fila para la carta -->
               <div class="card col-sm" style="width: 18rem;">
                   <img src="/img/chihuahua.jpeg" class="card-img-top" alt="...">
                   <div class="card-body">
@@ -127,6 +136,15 @@
                       <a href="#" class="btn btn-primary">Reserva aquí</a>
                   </div>
               </div>
+                <!-- Nueva fila para la carta -->
+                <div class="card col-sm" style="width: 18rem;">
+                  <img src="/img/maza.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Mazatlán, Sinaloa</h5>
+                    <p class="card-text">Mazatlán es un destino gastronómico sobresaliente; aquí podrás saborear los mariscos más frescos de México. Prueba los tacos de marlín, el aguachile y el chicharrón de calamar. ¡Son un manjar!</p>
+                    <a href="#" class="btn btn-primary">Reserva aquí</a>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
