@@ -9,29 +9,10 @@
       <link rel="stylesheet" href="styles.css">
       <title>Vuelos</title>
       
-      <style>
-          /* Define una clase personalizada para la fuente cursiva */
-          .font-cursiva 
-          {
-              font-style: italic;
-          }
-      </style>
-      <style>
-            h2.font-cursiva 
-            {
-              color: lightgreen; /* Cambia lightgreen al color que desees */
-            }
-      </style>
-      <style>
-          h1.font-cursiva 
-          {
-            color:darkcyan /* Cambia lightgreen al color que desees */
-          }
-       </style>
   </head>
 
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark border" style="background-color: #808080;">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark border fixed-top" style="background-color: #808080;">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="/img/Airplane_PNG_Clipart-421.png" alt="logo" width="80px">
@@ -53,7 +34,7 @@
             </div>
           </div>
       </nav>
-      
+      <div class="container view">
         <div class="container"> <!--Contenedor de todo abajo del navbar-->
           <div class="row"> <!--Contendra el titulo de la pagina y cuadrod e busqueda-->
             <h1 class="col-sm font-cursiva">Vuelos</h1>
@@ -63,59 +44,64 @@
             </form>
           </div>
         </div>
-        <div class="container row"> 
+        <div class="container row d-flex justify-content-center mt-3"> 
           <!--Contendra los vuelos-->
-          <div class="col-sm border"> 
-            <div class="border col-sm "> <!--Ejemplo de contenedor de vuelo-->
+          <div class="container col-sm m-3"> 
+            <div class="rounded border col-sm row m-2 p-2"> <!--Ejemplo de contenedor de vuelo-->
               <!--Los <p> que no tienen texto es donde ira la informacion desde base de datos-->
-              <p class="font-cursiva fw-bold text-success">Id:</p>
-                <p id="textId"></p>
-              
-              <p class="font-cursiva fw-bold text-success">Salida:</p>
-                <p id="salidaId"></p>
-
-              <p id="AeropuertoS"></p>
-
-              <p class="font-cursiva fw-bold text-success">Llegada:</p>
-
-                <p id="llegadaId"></p>
-              <p id="AeropuertoL"></p>
-
-              <p class="font-cursiva fw-bold text-success">Duracion vuelo:</p>
-                <p id="duracionId"></p>
-
-                <form class="col-sm d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Buscar Vuelo" aria-label="Search" style="border-width: 1px;">
+              <div class="container col-sm">
+                <div class="row">
+                  <p class="font-cursiva fw-bold text-success col-sm">Id:</p>
+                    <p id="textId" class="col-sm"></p>
+                </div>
+                <div class="row">
+                  <p class="font-cursiva fw-bold text-success col-sm">Salida:</p>
+                    <p id="salidaId" class="col-sm"></p>
+                    <p id="AeropuertoS" class="col-sm"></p>
+                </div>
+                <div class="row">
+                <p class="font-cursiva fw-bold text-success col-sm">Llegada:</p>
+                  <p id="llegadaId" class="col-sm"></p>
+                  <p id="AeropuertoL" class="col-sm"></p>
+                </div>
+                <div class="row">
+                  <p class="font-cursiva fw-bold text-success col-sm">Duracion vuelo:</p>
+                    <p id="duracionId" class="col-sm"></p>
+                </div>
+              </div>
+              <div class="col-sm d-flex justify-content-center align-items-center">
                   <button class="btn btn-outline-success" type="submit" style="border-width: 1px;">Buscar Vuelo</button>
-              </form>
-
+              </div>
             </div>
-            <div class="border col-sm"> <!--Ejemplo de contenedor de vuelo-->
+            <div class="rounded border col-sm row m-2 p-2"> <!--Ejemplo de contenedor de vuelo-->
               <!--Los <p> que no tienen texto es donde ira la informacion desde base de datos-->
-              <p class="font-cursiva fw-bold text-primary">Id:</p>
-                <p id="textId"></p>
-              
-              <p class="font-cursiva fw-bold text-primary">Salida:</p>
-                <p id="salidaId"></p>
-
-              <p id="AeropuertoS"></p>
-
-              <p class="font-cursiva fw-bold text-primary">Llegada:</p>
-
-                <p id="llegadaId"></p>
-              <p id="AeropuertoL"></p>
-
-              <p class="font-cursiva fw-bold text-primary">Duracion vuelo:</p>
-                <p id="duracionId"></p>
-                
-                <form class="col-sm d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Buscar vuelo" aria-label="Search" style="border-width: 0.5px;">
-                  <button class="btn btn-outline-success" type="submit" style="border-width: 0.5px;">Buscar Vuelo</button>
-              </form>
+              <div class="container col-sm">
+                <div class="row">
+                  <p class="font-cursiva fw-bold text-success col-sm">Id:</p>
+                    <p id="textId" class="col-sm"></p>
+                </div>
+                <div class="row">
+                  <p class="font-cursiva fw-bold text-success col-sm">Salida:</p>
+                    <p id="salidaId" class="col-sm"></p>
+                    <p id="AeropuertoS" class="col-sm"></p>
+                </div>
+                <div class="row">
+                <p class="font-cursiva fw-bold text-success col-sm">Llegada:</p>
+                  <p id="llegadaId" class="col-sm"></p>
+                  <p id="AeropuertoL" class="col-sm"></p>
+                </div>
+                <div class="row">
+                  <p class="font-cursiva fw-bold text-success col-sm">Duracion vuelo:</p>
+                    <p id="duracionId" class="col-sm"></p>
+                </div>
+              </div>
+              <div class="col-sm d-flex justify-content-center align-items-center">
+                  <button class="btn btn-outline-success" type="submit" style="border-width: 1px;">Buscar Vuelo</button>
+              </div>
             </div>
           </div>
         
-          <div class="container col-sm row">
+          <div class="container col-sm row m-3">
             <!-- Contenedor de todo abajo del navbar -->
             <div class="row">
                 <!-- Contendra el titulo de la pagina -->
@@ -148,8 +134,8 @@
             </div>
           </div>
         </div>
-
-      <footer class="s">
+      </div>
+      <footer>
         <h5>&copy; 2023 Tecport Airlines. Todos los derechos reservados.</h5>
       </footer>
 
