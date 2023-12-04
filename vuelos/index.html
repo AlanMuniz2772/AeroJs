@@ -8,11 +8,21 @@
       <title>Tecport Airlines</title>
       <link rel="stylesheet" href="styles.css">
       <title>Vuelos</title>
-      
+      <style>
+          /* Define una clase personalizada para la fuente cursiva */
+          .font-cursiva {
+              font-style: italic;
+          }
+      </style>
+      <style>
+        h2.font-cursiva {
+            color: lightgreen; /* Cambia lightgreen al color que desees */
+        }
+    </style>
   </head>
 
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark border fixed-top" style="background-color: #808080;">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border">
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="/img/Airplane_PNG_Clipart-421.png" alt="logo" width="80px">
@@ -23,10 +33,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/home.html" style="color: white;">Home</a>
+                  <a class="nav-link active" aria-current="page" href="/home.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/vuelos/index.html" style="color: white;">Vuelos</a>
+                  <a class="nav-link" href="/vuelos/index.html">Vuelos</a>
                 </li>
                 
               </ul>
@@ -34,60 +44,24 @@
             </div>
           </div>
       </nav>
-      <div class="container view">
+      
         <div class="container"> <!--Contenedor de todo abajo del navbar-->
           <div class="row"> <!--Contendra el titulo de la pagina y cuadrod e busqueda-->
             <h1 class="col-sm font-cursiva">Vuelos</h1>
-            <form class="col-sm d-flex">
+            <form class="col-sm">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
         </div>
-        <div class="container row d-flex justify-content-center mt-3"> 
+        <div class="container row"> 
           <!--Contendra los vuelos-->
           <div class="col-sm border"> 
-            <div class="border col-sm"> <!--Ejemplo de contenedor de vuelo-->
-              <!--Los <p> que no tienen texto es donde ira la informacion desde base de datos-->
-              <p class="font-cursiva">Id:</p>
-                <p id="textId"></p>
-              
-              <p class="font-cursiva">Salida:</p>
-                <p id="salidaId"></p>
-
-              <p id="AeropuertoS"></p>
-
-              <p class="font-cursiva">Llegada:</p>
-
-                <p id="llegadaId"></p>
-              <p id="AeropuertoL"></p>
-
-              <p class="font-cursiva">Duracion vuelo:</p>
-                <p id="duracionId"></p>
-
-            </div>
-            <div class="border col-sm"> <!--Ejemplo de contenedor de vuelo-->
-              <!--Los <p> que no tienen texto es donde ira la informacion desde base de datos-->
-              <p class="font-cursiva">Id:</p>
-                <p id="textId"></p>
-              
-              <p class="font-cursiva">Salida:</p>
-                <p id="salidaId"></p>
-
-              <p id="AeropuertoS"></p>
-
-              <p class="font-cursiva">Llegada:</p>
-
-                <p id="llegadaId"></p>
-              <p id="AeropuertoL"></p>
-
-              <p class="font-cursiva">Duracion vuelo:</p>
-                <p id="duracionId"></p>
-
-            </div>
+            <h1>Vuelos Disponibles</h1>
+            <p id="flights"></p>
           </div>
         
-          <div class="container col-sm row m-3">
+          <div class="container col-sm row">
             <!-- Contenedor de todo abajo del navbar -->
             <div class="row">
                 <!-- Contendra el titulo de la pagina -->
@@ -100,7 +74,7 @@
         
             <!-- Nueva fila para la carta -->
             <div class="row col-sm">
-              <div class="card col-sm" style="width: 18rem;">
+              <div class="card" style="width: 18rem;">
                   <img src="/img/chihuahua.jpeg" class="card-img-top" alt="...">
                   <div class="card-body">
                       <h5 class="card-title font-cursiva">Chihuahua, Chihuahua</h5>
@@ -109,19 +83,19 @@
                   </div>
               </div>
                 <!-- Nueva fila para la carta -->
-                <div class="card col-sm" style="width: 18rem;">
-                  <img src="/img/maza.jpg" class="card-img-top" alt="...">
+              <div class="card col-sm" style="width: 18rem;">
+                  <img src="/img/chihuahua.jpeg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Mazatlán, Sinaloa</h5>
-                    <p class="card-text">Mazatlán es un destino gastronómico sobresaliente; aquí podrás saborear los mariscos más frescos de México. Prueba los tacos de marlín, el aguachile y el chicharrón de calamar. ¡Son un manjar!</p>
-                    <a href="#" class="btn btn-primary">Reserva aquí</a>
+                      <h5 class="card-title font-cursiva">Chihuahua, Chihuahua</h5>
+                      <p class="card-text font-cursiva">La ciudad de Chihuahua, en México, ofrece modernidad e historia en una combinación que logra cautivar al visitante que arriba por motivo de negocios o placer.</p>
+                      <a href="#" class="btn btn-primary">Reserva aquí</a>
                   </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <footer>
+
+      <footer class="s">
         <h5>&copy; 2023 Tecport Airlines. Todos los derechos reservados.</h5>
       </footer>
 
