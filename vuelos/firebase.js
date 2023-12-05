@@ -77,8 +77,11 @@ export async function readFlightsBy() {
 }
 
 // TODO: Añadir lógica para actualizar un vuelo
-export const updateFlight = () => {
-  updateDoc(collection(db, "flights"), {});
+export async function updateFlight(id_flight, numPasajeros) {
+  const flightsRef = collection(db, "flights", id_flight);
+  const flightsSnap = await updateDoc(flightsRef, {
+    espacio: numPasajeros,
+  });
 };
 
 // TODO: Añadir lógica para borrar un vuelo

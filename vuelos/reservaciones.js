@@ -28,15 +28,26 @@ window.addEventListener("DOMContentLoaded", async () => {
   let trackButton4 = document.getElementById("track-btn-4");
   let trackButton5 = document.getElementById("track-btn-5");
 
-  trackButton1.addEventListener("click", () => {
+  trackButton1.addEventListener("click", async () => {
+    // TODO: Obtener el número de pasajeros
+    await updateFlight(1, numPasajeros);
+    alert(`El vuelo 1 fue reservado para ${numPasajeros} pasajeros`);
   });
-  trackButton2.addEventListener("click", () => {
+  trackButton2.addEventListener("click", async () => {
+    await updateFlight(2, numPasajeros);
+    alert(`El vuelo 2 fue reservado para ${numPasajeros} pasajeros`);
   });
-  trackButton3.addEventListener("click", () => {
+  trackButton3.addEventListener("click", async () => {
+    await updateFlight(3, numPasajeros);
+    alert(`El vuelo 3 fue reservado para ${numPasajeros} pasajeros`);
   });
-  trackButton4.addEventListener("click", () => {
+  trackButton4.addEventListener("click", async () => {
+    await updateFlight(4, numPasajeros);
+    alert(`El vuelo 4 fue reservado para ${numPasajeros} pasajeros`);
   });
-  trackButton5.addEventListener("click", () => {
+  trackButton5.addEventListener("click", async () => {
+    await updateFlight(5, numPasajeros);
+    alert(`El vuelo 5 fue reservado para ${numPasajeros} pasajeros`);
   });
 });
 
