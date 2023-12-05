@@ -1,10 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 // Import the functions you need from the SDKs you need
 import {
+  doc as d,
   addDoc,
   getDoc,
   getDocs,
-  updateDoc,
+  updateDoc as ud,
   deleteDoc,
   collection,
   getFirestore,
@@ -22,7 +23,7 @@ const firebaseConfig = {
   projectId: "tecport1-ec0cb",
   storageBucket: "tecport1-ec0cb.appspot.com",
   messagingSenderId: "235429804495",
-  appId: "1:235429804495:web:cdbff3fbd3bd1f7ee7faba"
+  appId: "1:235429804495:web:cdbff3fbd3bd1f7ee7faba",
 };
 
 // Initialize Firebase
@@ -59,6 +60,12 @@ export async function readCoordinates(idFlight) {
   return coordinatesSnap.docs.map((doc) => doc.data());
 }
 
+export async function readSpaceAvailable(idFlight) {
+  const flightRef = d(db, "flights", idFlight);
+  const flightSnap = await getDoc(flightRef);
+  return flightSnap.data().espacio;
+}
+
 // // TODO: Añadir lógica para leer los vuelos
 // export const readFlights = () => {
 //   getDocs(collection(db, "flights"), {});
@@ -78,11 +85,11 @@ export async function readFlightsBy() {
 
 // TODO: Añadir lógica para actualizar un vuelo
 export async function updateFlight(id_flight, numPasajeros) {
-  const flightsRef = collection(db, "flights", id_flight);
-  const flightsSnap = await updateDoc(flightsRef, {
+  const flightRef = d(db, "flights", id_flight);
+  await ud(flightRef, {
     espacio: numPasajeros,
   });
-};
+}
 
 // TODO: Añadir lógica para borrar un vuelo
 export const deleteFlight = () => {

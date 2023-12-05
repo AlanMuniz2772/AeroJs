@@ -1,9 +1,0 @@
-footer {
-    color: #fff; /* Cambia este color al que desees */
-    background-color: #333; /* Cambia el color de fondo si es necesario */
-    text-align: center; /* Centra el texto horizontalmente */
-    padding: 10px; /* Añade espacio interno alrededor del texto para mejorar la apariencia */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}

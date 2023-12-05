@@ -1,4 +1,4 @@
-import { readCoordinates, readFlights } from "./firebase.js";
+import { readCoordinates, readFlights, readSpaceAvailable, updateFlight } from "./firebase.js";
 
 let flightsText = document.getElementById("flights");
 let flights = [];
@@ -37,24 +37,44 @@ window.addEventListener("DOMContentLoaded", async () => {
   let resevButton4 = document.getElementById("resev-btn-4");
   let resevButton5 = document.getElementById("resev-btn-5");
 
-  resevButton1.addEventListener("click", () => {
-    let idText = document.getElementById("id-txt-1");
+  resevButton1.addEventListener("click", async () => {
+    let inputBoletos = document.getElementById("input-1");
+    let numPasajeros = inputBoletos.value;
+    let espacioDisponible = await readSpaceAvailable("1");
+    await updateFlight("1", (espacioDisponible- numPasajeros));
+    alert(`El vuelo 1 fue reservado para ${numPasajeros} pasajeros`);
   })
 
-  resevButton2.addEventListener("click", () => {
-    let idText = document.getElementById("id-txt-2");
+  resevButton2.addEventListener("click", async () => {
+    let inputBoletos = document.getElementById("input-2");
+    let numPasajeros = inputBoletos.value;
+    let espacioDisponible = await readSpaceAvailable("2");
+    await updateFlight("2", (espacioDisponible- numPasajeros));
+    alert(`El vuelo 2 fue reservado para ${numPasajeros} pasajeros`);
   })
 
-  resevButton3.addEventListener("click", () => { 
-    let idText = document.getElementById("id-txt-3");
+  resevButton3.addEventListener("click", async () => { 
+    let inputBoletos = document.getElementById("input-3");
+    let numPasajeros = inputBoletos.value;
+    let espacioDisponible = await readSpaceAvailable("3");
+    await updateFlight("3", (espacioDisponible- numPasajeros));
+    alert(`El vuelo 3 fue reservado para ${numPasajeros} pasajeros`);
   })
 
-  resevButton4.addEventListener("click", () => {
-    let idText = document.getElementById("id-txt-4"); 
+  resevButton4.addEventListener("click", async () => {
+    let inputBoletos = document.getElementById("input-4");
+    let numPasajeros = inputBoletos.value;
+    let espacioDisponible = await readSpaceAvailable("4");
+    await updateFlight("4", (espacioDisponible- numPasajeros));
+    alert(`El vuelo 4 fue reservado para ${numPasajeros} pasajeros`);
   })
 
-  resevButton5.addEventListener("click", () => {
-    let idText = document.getElementById("id-txt-5");
+  resevButton5.addEventListener("click", async () => {
+    let inputBoletos = document.getElementById("input-5");
+    let numPasajeros = inputBoletos.value;
+    let espacioDisponible = await readSpaceAvailable("5");
+    await updateFlight("5", (espacioDisponible- numPasajeros));
+    alert(`El vuelo 5 fue reservado para ${numPasajeros} pasajeros`);
   })
 
   trackButton1.addEventListener("click", () => {
@@ -123,26 +143,3 @@ function showHideMenu() {
     menu.classList.add("show");
   }
 }
-
-// document.getElementById("menuButton").onclick = showHideMenu;
-
-// coordinates = await readCoordinates();
-// trackButton.addEventListener("click", () => {console.log(coordinates.pop())});
-
-// trackButton.addEventListener("click", async () => {
-//   setInterval(() => {
-//     console.log(coordinates.pop());
-//   }, 1000);
-// });
-
-// trackButton.addEventListener("click", () => {
-//   setInterval(async () => {
-//     coordinates = await readCoordinates();
-//     // console.log(coordinates.pop());
-//     console.log(coordinatesText.innerHTML);
-//     coordinatesText.innerHTML =
-//       coordinatesText.innerHTML + JSON.stringify(coordinates.pop()) + "<br>";
-//   }, 1000);
-// });
-
-
