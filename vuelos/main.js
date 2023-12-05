@@ -16,6 +16,9 @@ window.addEventListener("DOMContentLoaded", async () => {
         <p>Destino: ${flight.destino}</p>
         <p>Espacio: ${flight.espacio}</p>
         <button id="track-btn-${index + 1}">Rastrear Vuelo</button>
+        <input id="input-${index + 1}" type="number"></input>
+        <button id="resev-btn-${index + 1}">Comprar boletos</button>
+        <p id="id-txt-${index + 1}"></p>
         <p id="coordinates-txt-${index + 1}"></p>
         <hr>
       </div>
@@ -28,6 +31,32 @@ window.addEventListener("DOMContentLoaded", async () => {
   let trackButton4 = document.getElementById("track-btn-4");
   let trackButton5 = document.getElementById("track-btn-5");
 
+  let resevButton1 = document.getElementById("resev-btn-1");
+  let resevButton2 = document.getElementById("resev-btn-2");
+  let resevButton3 = document.getElementById("resev-btn-3");
+  let resevButton4 = document.getElementById("resev-btn-4");
+  let resevButton5 = document.getElementById("resev-btn-5");
+
+  resevButton1.addEventListener("click", () => {
+    let idText = document.getElementById("id-txt-1");
+  })
+
+  resevButton2.addEventListener("click", () => {
+    let idText = document.getElementById("id-txt-2");
+  })
+
+  resevButton3.addEventListener("click", () => { 
+    let idText = document.getElementById("id-txt-3");
+  })
+
+  resevButton4.addEventListener("click", () => {
+    let idText = document.getElementById("id-txt-4"); 
+  })
+
+  resevButton5.addEventListener("click", () => {
+    let idText = document.getElementById("id-txt-5");
+  })
+
   trackButton1.addEventListener("click", () => {
     let coordinatesText = document.getElementById("coordinates-txt-1");
     let coordinates = [];
@@ -36,8 +65,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       coordinates = await readCoordinates(1);
       // console.log(coordinates.pop());
       // console.log(coordinatesText.innerHTML);
-      coordinatesText.innerHTML =
-        coordinatesText.innerHTML + JSON.stringify(coordinates[coordinates.length - 1]) + "<br>";
+      coordinatesText.innerHTML = JSON.stringify(coordinates[coordinates.length - 1]) + "<br>";
     }, 3000);
   });
   trackButton2.addEventListener("click", () => {
@@ -48,8 +76,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       coordinates = await readCoordinates(2);
       // console.log(coordinates.pop());
       console.log(coordinatesText.innerHTML);
-      coordinatesText.innerHTML =
-        coordinatesText.innerHTML + JSON.stringify(coordinates[coordinates.length - 1]) + "<br>";
+      coordinatesText.innerHTML = JSON.stringify(coordinates[coordinates.length - 1]) + "<br>";
     }, 3000);
   });
   trackButton3.addEventListener("click", () => {
@@ -60,8 +87,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       coordinates = await readCoordinates(3);
       // console.log(coordinates.pop());
       console.log(coordinatesText.innerHTML);
-      coordinatesText.innerHTML =
-        coordinatesText.innerHTML + JSON.stringify(coordinates[coordinates.length - 1]) + "<br>";
+      coordinatesText.innerHTML = JSON.stringify(coordinates[coordinates.length - 1]) + "<br>";
     }, 3000);
   });
   trackButton4.addEventListener("click", () => {
@@ -72,8 +98,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       coordinates = await readCoordinates(4);
       // console.log(coordinates.pop());
       console.log(coordinatesText.innerHTML);
-      coordinatesText.innerHTML =
-        coordinatesText.innerHTML + JSON.stringify(coordinates[coordinates.length - 1]) + "<br>";
+      coordinatesText.innerHTML = JSON.stringify(coordinates[coordinates.length - 1]) + "<br>";
     }, 3000);
   });
   trackButton5.addEventListener("click", () => {
@@ -84,8 +109,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       coordinates = await readCoordinates(5);
       // console.log(coordinates.pop());
       console.log(coordinatesText.innerHTML);
-      coordinatesText.innerHTML =
-        coordinatesText.innerHTML + JSON.stringify(coordinates[coordinates.length - 1]) + "<br>";
+      coordinatesText.innerHTML = JSON.stringify(coordinates[coordinates.length - 1]) + "<br>";
     }, 3000);
   });
 });
@@ -120,3 +144,5 @@ function showHideMenu() {
 //       coordinatesText.innerHTML + JSON.stringify(coordinates.pop()) + "<br>";
 //   }, 1000);
 // });
+
+
